@@ -16,7 +16,7 @@ def ind_find(lst):
         ml = (lt + rt) // 2
 
     if lt > rt:
-        return 'None'
+        return None
     else:
         fa = 'Индекс искомого числа: ' + str(ml)
         return fa

@@ -3,7 +3,7 @@
 def ind_find_rec(lst, vl, lt, rt):
 
     if lt > rt:
-        return 'None'
+        return None
     else:
         ml = (lt + rt) // 2
 
