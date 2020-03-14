@@ -1,18 +1,17 @@
 
 
-def ind_find_rec(lst, vl):
+def ind_find_rec(lst, vl, lt, rt):
 
-    if len(lst) == 0:
+    if lt > rt:
         return 'None'
     else:
-        ml = len(lst) // 2
+        ml = (lt + rt) // 2
 
-    if lst[ml] == vl:
-        fa = 'Индекс искомого числа: ' + str(ml)
-        return fa
-    else:
-        if vl < lst[ml]:
-            return ind_find_rec(lst[:ml], vl)
+        if lst[ml] == vl:
+            fa = 'Индекс искомого числа: ' + str(ml)
+            return fa
+        elif vl < lst[ml]:
+            return ind_find_rec(lst, vl, lt, rt - 1)
         else:
-            return ind_find_rec(lst[ml + 1:], vl)
+            return ind_find_rec(lst, vl, ml + 1, rt)
 

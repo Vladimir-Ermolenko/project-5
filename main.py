@@ -19,9 +19,11 @@ elif int(fct_ch) == 2:
     lst = list(map(int, input('Введите элементы списка через пробел: \n').split()))
     lst.sort()
     vl = int(input('Введите искомое число: '))
+    lt = lst[0]
+    rt = lst[-1]
 
     strt_tm = time.time()
 
-    print(ind_find_rec(lst, vl))
+    print(ind_find_rec(lst, vl, lt, rt))
     print('Время выполнения: ' + '~' + str(time.time() - strt_tm))
 
